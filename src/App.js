@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import styled,{createGlobalStyle} from "styled-components";
+import Home from "./Pages/Home";
+
+//*(styled-componets) used to style the components 
+const Container = styled.div`
+ background-color: #FFFFFF;
+ margin: 100px 200px;
+`
+
+const GlobalStyle = createGlobalStyle`
+ body{
+  margin: 0px;
+ }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+    <GlobalStyle/>
+    <Home/>
+    </Container>
+    
   );
 }
 
